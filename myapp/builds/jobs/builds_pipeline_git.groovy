@@ -13,6 +13,7 @@ pipelineJob('myapp_git_pipeline') {
         cpsScm {
             scm {
                 git('https://github.com/bibekmantree/azure_terraform_jenkins.git')
+                credentials('github')
             }
         }
     }
