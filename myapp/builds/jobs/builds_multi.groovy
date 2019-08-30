@@ -10,6 +10,11 @@ pipelineJob('myapp_classic_pipeline') {
         githubPush()
         //scm('H/4 * * * *')
     }
+    definition {
+        cps {
+            sandbox()
+        }
+    
 }//end job
 
 job('myapp_freestyle') {
@@ -27,7 +32,7 @@ job('myapp_freestyle') {
     }
     steps {
         shell(
-            'echo Hello Pipelene'
+            'echo Hello Pipeline'
         )
     }
 }
