@@ -1,17 +1,23 @@
-job('dsl_seed_project') {
+job('dsl_seed_myapp') {
     scm {
         git {
             remote {
-        		url('https://github.com/bibekmantree/seed_experiment.git')
-        		credentials('github')
+                    url('https://github.com/bibekmantree/seed_experiment.git')
+                    credentials('github')
             }
         }
     }
     wrappers {
         preBuildCleanup()
     }
-    
     triggers {
         upstream('metarseed', 'UNSTABLE')
+    }
+    steps {
+        dsl {
+            external('./myapp/dsl_seed_myapp.groovy')
+            removeAction('DELETE')
+            removeViewAction('DELETE')
+        }
     }
 }
