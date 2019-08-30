@@ -14,6 +14,7 @@ pipelineJob('myapp_classic_pipeline') {
         cps {
             sandbox()
         }
+    }
     
 }//end job
 
@@ -35,4 +36,4 @@ job('myapp_freestyle') {
             'echo Hello Pipeline'
         )
     }
-}
+    }
