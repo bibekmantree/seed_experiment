@@ -12,6 +12,7 @@ pipelineJob('myapp_classic_pipeline') {
     }
     definition {
         cps {
+            script(readFileFromWorkspace('./myapp/builds/pipelines/injob_pipeline.groovy'))
             sandbox()
         }
     }
