@@ -21,7 +21,7 @@ job('myapp_freestyle') {
              }
         }
     }
-    }
+    
     wrappers {
         preBuildCleanup()
     }
