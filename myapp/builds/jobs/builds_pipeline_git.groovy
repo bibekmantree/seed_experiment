@@ -9,8 +9,5 @@ pipelineJob('myapp_git_pipeline') {
         githubPush()
         //scm('H/4 * * * *')
     }
-    definition {
-        
-    }
     
 }
