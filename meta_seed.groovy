@@ -10,4 +10,8 @@ job('dsl_seed_project') {
     wrappers {
         preBuildCleanup()
     }
+    
+    triggers {
+        upstream('metarseed', 'UNSTABLE')
+    }
 }
