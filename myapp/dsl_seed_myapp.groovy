@@ -15,7 +15,7 @@ job('dsl_seed_myapp_builds') {
     }
     steps {
         dsl {
-            external('./myapp/builds/builds_*.groovy')
+            external('./myapp/builds/jobs/builds_*.groovy')
             removeAction('DELETE')
             removeViewAction('DELETE')
         }
