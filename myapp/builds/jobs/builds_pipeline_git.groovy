@@ -10,7 +10,18 @@ pipelineJob('myapp_git_pipeline') {
         //scm('H/4 * * * *')
     }
     definition {
-        
-    }
+		cpsScm {
+			scm {
+				git {
+					remote {
+						github("bibekmantree/azure_terraform_jenkins", "https")
+						credentials("github")
+					}
+					branch("*/master")
+				}
+			}
+			scriptPath("Jenkinsfile")
+		}
+	}
     
 }
