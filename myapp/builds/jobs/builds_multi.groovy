@@ -7,8 +7,8 @@ pipelineJob('myapp_classic_pipeline') {
         githubProjectUrl('https://github.com/bibekmantree/seed_experiment.git')
     }
     triggers {
-        githubPush()
-        //scm('H/4 * * * *')
+        //githubPush()
+        scm('H/4 * * * *')
     }
     definition {
         cps {
