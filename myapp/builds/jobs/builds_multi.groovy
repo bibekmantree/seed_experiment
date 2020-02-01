@@ -4,7 +4,7 @@ pipelineJob('myapp_classic_pipeline') {
         numToKeep(7)
     }
     properties {
-        githubProjectUrl('https://github.com/bibekmantree/seed_experiment.git')
+        //githubProjectUrl('https://github.com/bibekmantree/seed_experiment.git')
     }
     triggers {
         //githubPush()
