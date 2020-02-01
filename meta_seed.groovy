@@ -10,7 +10,7 @@ job('dsl_seed_myapp') {
         preBuildCleanup()
     }
     triggers {
-        upstream('metarseed', 'UNSTABLE')
+        upstream('meta_seed_dsl', 'UNSTABLE')
     }
     steps {
         dsl {
