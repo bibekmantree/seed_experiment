@@ -3,7 +3,6 @@ job('dsl_seed_myapp_builds') {
         git {
             remote {
                     url('https://github.com/bibekmantree/seed_experiment.git')
-                    credentials('github')
              }
         }
     }
