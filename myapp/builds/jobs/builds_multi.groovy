@@ -32,7 +32,7 @@ pipelineJob('myapp_classic_pipeline_2') {
     }
     definition {
         cps {
-            script(readFileFromWorkspace('./myapp/builds/pipelines/injob_pipeline.groovy'))
+            script(readFileFromWorkspace('./myapp/builds/pipelines/injob_pipeline_2.groovy'))
             sandbox()
         }
     }
