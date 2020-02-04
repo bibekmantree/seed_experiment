@@ -8,11 +8,11 @@ pipeline {
             }
         }//end SCM
         
-         /*stage ('Cleanup') {
+         stage ('Cleanup') {
             steps {
                 step([$class: 'WsCleanup']) 
             }
-        } */
+        } 
     }
 
 }
