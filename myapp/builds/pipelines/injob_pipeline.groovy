@@ -1,6 +1,11 @@
 pipeline {
-    agent any
+    agent { label 'master' }
     stages {
+        stage('Clean Up'){
+          steps{
+            step([$class: 'WsCleanup'])
+          }
+        }
         stage('SCM') {
             steps { 
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'PathRestriction', excludedRegions: '', includedRegions: '''myapp/.*
