@@ -8,7 +8,7 @@ pipelineJob('myapp_classic_pipeline') {
     }
     triggers {
         //githubPush()
-        scm('H/4 * * * *')
+        scm('H/2 * * * *')
     }
     definition {
         cps {
@@ -28,7 +28,7 @@ pipelineJob('myapp_classic_pipeline_2') {
     }
     triggers {
         //githubPush()
-        scm('H/4 * * * *')
+        scm('H/2 * * * *')
     }
     definition {
         cps {
@@ -59,7 +59,7 @@ job('myapp_freestyle') {
     }
     triggers {
         //githubPush()
-        scm('H/4 * * * *')
+        scm('H/2 * * * *')
     }
     definition {
         cps {
