@@ -57,3 +57,23 @@ job('myapp_freestyle') {
         )
     }
  }
+    
+pipelineJob('indi_repo') {
+    logRotator {
+        numToKeep(7)
+    }
+    properties {
+        //githubProjectUrl('https://github.com/bibekmantree/seed_experiment.git')
+    }
+    triggers {
+        //githubPush()
+        scm('H/2 * * * *')
+    }
+    definition {
+        cps {
+            script(readFileFromWorkspace('./myapp/builds/pipelines/indi_pipeline.groovy'))
+            sandbox()
+        }
+    }
+    
+}//end job
